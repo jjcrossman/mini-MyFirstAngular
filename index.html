@@ -13,13 +13,13 @@
 
 <h1>My Friends</h1>
 
-<input ng-model="name" type="text" placeholder="Add friends . . .">
+<input ng-model="addNewFriend.name" type="text" placeholder="Add friends . . .">
 
-<button data-ng-click="addFriend( name )">Add Friend</button>
+<button data-ng-click="addFriend( addNewFriend )">Add Friend</button>
 
-<div data-ng-repeat="friend in friends">
+<div>
 <ul>
-  <li>{{ friend.name }}</li>
+  <li data-ng-repeat="friend in friends">{{ friend.name }}</li>
 </ul>
 </div>
 
